@@ -1,0 +1,7 @@
+@mixin footer-text {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: $color-dark;
+}

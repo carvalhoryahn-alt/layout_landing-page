@@ -1,0 +1,139 @@
+.header {
+  animation: fade-in $animation-duration ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: url('../images/Image-header.png');
+  background-size: cover;
+  background-position: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  z-index: 1;
+  padding: 32px 120px 92px;
+  margin: 0 auto;
+  height: 125vh;
+
+  &__top {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 56px;
+    padding-bottom: 80px;
+    max-width: 470px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__logo {
+    display: block;
+    height: 24px;
+  }
+
+  &__phone-number {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity $transition-duration;
+    font-family: Inter, sans-serif;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: bold;
+    color: $color-dark;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &__phone-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      .header__phone-number {
+        opacity: 1;
+        width: auto;
+      }
+    }
+  }
+
+  &__burger-icon--hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  &__burger {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .header__burger-icon,
+    .header__burger-icon--hover {
+      width: 24px;
+      height: 16px;
+    }
+
+    &:hover {
+      .header__burger-icon {
+        opacity: 0;
+        transition: opacity $transition-duration;
+      }
+
+      .header__burger-icon--hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  @media (max-width: 744px) {
+    padding: 36px 72px 72px;
+    padding-bottom: 1px;
+    height: 100vh;
+
+    &__title {
+      max-width: 310px;
+      font-size: 40px;
+      padding-bottom: 65px;
+      line-height: 100%;
+    }
+  }
+
+  @media (max-width: 320px) {
+    padding: 24px 20px 48px;
+    padding-bottom: 20px;
+    height: 100vh;
+
+    &__title {
+      font-size: 36px;
+      padding-bottom: 12px;
+    }
+
+    &__actions {
+      gap: 27px;
+    }
+
+    &__logo {
+      img {
+        height: 18px;
+      }
+    }
+  }
+}

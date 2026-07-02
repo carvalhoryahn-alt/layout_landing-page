@@ -1,0 +1,124 @@
+.menu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #e5e6e8;
+  overflow: auto;
+
+  &:target {
+    display: block;
+    animation: fade-in $transition-duration ease-in-out;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    height: 96px;
+    padding: 0 120px;
+    top: 0;
+    background-color: #e5e6e8;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 32px;
+    padding: 0 120px;
+    margin-top: 56px;
+  }
+
+  &__logo {
+    display: block;
+    height: 24px;
+  }
+
+  &__close-icon {
+    display: block;
+    height: 21px;
+    width: 21px;
+  }
+
+  &__link {
+    position: relative;
+    font-size: 22px;
+    color: $color-dark;
+    line-height: 22px;
+    font-weight: bold;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color-dark;
+      transition: width $transition-duration;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 16px;
+    padding: 0 120px;
+    margin-top: 48px;
+    align-items: flex-start;
+  }
+
+  &__phone {
+    @include footer-text;
+  }
+
+  &__call {
+    @include footer-text;
+
+    border-bottom: 1px solid $color-dark;
+    padding-bottom: 4px;
+  }
+
+  @media (max-width: 744px) {
+    &__top {
+      padding: 0 72px;
+    }
+
+    &__list {
+      padding: 0 72px;
+    }
+
+    &__footer {
+      padding: 0 72px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    &__top {
+      padding: 0 20px;
+    }
+
+    &__list {
+      padding: 0 20px;
+      gap: 24px;
+    }
+
+    &__footer {
+      padding: 0 20px;
+    }
+
+    &__link {
+      font-size: 18px;
+    }
+  }
+}
