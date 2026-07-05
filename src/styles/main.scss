@@ -1,6 +1,7 @@
 @import './blocks/mixins/mixin';
 @import './blocks/animations/animation';
 @import './blocks/variables/variables';
+@import './blocks/container/container';
 @import './blocks/header/header';
 @import './blocks/menu/menu';
 @import './blocks/cards/card';
@@ -24,6 +25,10 @@ html {
   color: $color-dark;
   background-color: $color-white;
   overflow-x: hidden;
+}
+
+.page:has(.menu:target) {
+  overflow: hidden;
 }
 
 a {

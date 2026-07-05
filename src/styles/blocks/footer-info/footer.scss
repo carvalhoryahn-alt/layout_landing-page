@@ -4,15 +4,7 @@
     background-image: url('../images/Image-footer.svg');
     background-size: cover;
     background-position: center;
-    height: 526px;
+    height: 524px;
     width: 100%;
-
-    @media (max-width: 744px) {
-      height: 300px;
-    }
-
-    @media (max-width: 320px) {
-      height: 200px;
-    }
   }
 }

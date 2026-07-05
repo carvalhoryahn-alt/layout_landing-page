@@ -1,41 +1,16 @@
 .about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0 120px;
   padding-top: 56px;
-  padding-bottom: 120px;
 
   &__title {
+    grid-column: 1 / 5;
     font-size: 48px;
     line-height: 48px;
   }
 
   &__description {
+    grid-column: 7 / -1;
     font-family: 'Space Mono', monospace;
     font-size: 16px;
     letter-spacing: 1px;
-    margin-left: 80px;
-  }
-
-  @media (max-width: 744px) {
-    grid-template-columns: 1fr;
-    padding: 40px 72px 72px;
-
-    &__title {
-      font-size: 36px;
-      margin-bottom: 24px;
-    }
-
-    &__description {
-      margin-left: 0;
-    }
-  }
-
-  @media (max-width: 320px) {
-    padding: 40px 20px;
-
-    &__title {
-      font-size: 28px;
-    }
   }
 }

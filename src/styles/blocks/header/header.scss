@@ -1,34 +1,23 @@
 .header {
   animation: fade-in $animation-duration ease-in-out;
-  display: flex;
-  flex-direction: column;
-  position: relative;
   background-image: url('../images/Image-header.png');
   background-size: cover;
   background-position: center;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
   z-index: 1;
-  padding: 32px 120px 92px;
-  margin: 0 auto;
-  height: 125vh;
+  margin-bottom: 120px;
 
   &__top {
     display: flex;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    background-color: transparent;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    grid-column: 1 / -1;
   }
 
   &__title {
+    padding-top: 420px;
     font-size: 56px;
-    padding-bottom: 80px;
-    max-width: 470px;
+    grid-column: 1 / 6;
+    width: 498px;
   }
 
   &__actions {
@@ -38,8 +27,10 @@
   }
 
   &__logo {
-    display: block;
-    height: 24px;
+    img {
+      display: block;
+      height: 24px;
+    }
   }
 
   &__phone-number {
@@ -99,40 +90,6 @@
 
       .header__burger-icon--hover {
         opacity: 1;
-      }
-    }
-  }
-
-  @media (max-width: 744px) {
-    padding: 36px 72px 72px;
-    padding-bottom: 1px;
-    height: 100vh;
-
-    &__title {
-      max-width: 310px;
-      font-size: 40px;
-      padding-bottom: 65px;
-      line-height: 100%;
-    }
-  }
-
-  @media (max-width: 320px) {
-    padding: 24px 20px 48px;
-    padding-bottom: 20px;
-    height: 100vh;
-
-    &__title {
-      font-size: 36px;
-      padding-bottom: 12px;
-    }
-
-    &__actions {
-      gap: 27px;
-    }
-
-    &__logo {
-      img {
-        height: 18px;
       }
     }
   }

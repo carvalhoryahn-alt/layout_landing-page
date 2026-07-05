@@ -1,34 +1,19 @@
 .gallery {
   display: flex;
   flex-direction: column;
-  padding: 0 120px;
 
   &__title {
-    padding-top: 120px;
+    grid-column: 1 / 7;
     font-size: 48px;
     padding-bottom: 56px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 0 72px;
-
-    &__title {
-      padding-top: 72px;
-      font-size: 36px;
-    }
-  }
-
-  @media (max-width: 320px) {
-    padding: 0 20px;
-
-    &__title {
-      padding-top: 40px;
-      font-size: 28px;
-    }
+    padding-top: 80px;
+    width: 585px;
+    line-height: 48px;
   }
 }
 
 .categories {
+  grid-column: 1 / 13;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -59,33 +44,18 @@
       color: $color-white;
     }
   }
-
-  @media (max-width: 744px) {
-    &__button {
-      width: 100%;
-      margin-bottom: 72px;
-    }
-  }
-
-  @media (max-width: 320px) {
-    &__button {
-      margin-bottom: 40px;
-    }
-  }
 }
 
 .category {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 24px;
-  width: 100%;
 
   &--reverse {
     grid-template-columns: 1fr 2fr;
   }
 
   &__title {
-    grid-column: 1 / -1;
     padding-top: 16px;
     padding-bottom: 56px;
     font-size: 24px;
@@ -98,6 +68,7 @@
   &__image-4,
   &__image-5,
   &__image-6 {
+    display: block;
     height: 324px;
     border-radius: 8px;
     background-repeat: no-repeat;
@@ -129,40 +100,6 @@
   @for $i from 1 through 6 {
     &__image-#{$i}:hover {
       transform: scale(1.02);
-    }
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-
-    &--reverse {
-      grid-template-columns: 1fr;
-    }
-
-    &__image-1,
-    &__image-2,
-    &__image-3,
-    &__image-4,
-    &__image-5,
-    &__image-6 {
-      height: 200px;
-    }
-  }
-
-  @media (max-width: 320px) {
-    grid-template-columns: 1fr 1fr;
-
-    &--reverse {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    &__image-1,
-    &__image-2,
-    &__image-3,
-    &__image-4,
-    &__image-5,
-    &__image-6 {
-      height: 150px;
     }
   }
 }

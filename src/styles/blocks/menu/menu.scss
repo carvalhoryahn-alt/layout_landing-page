@@ -1,37 +1,56 @@
 .menu {
   display: none;
   position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 2;
   background-color: #e5e6e8;
-  overflow: auto;
 
   &:target {
     display: block;
     animation: fade-in $transition-duration ease-in-out;
   }
 
+  &__container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 120px;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 24px;
+
+    @media (max-width: 744px) {
+      padding: 0 72px;
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media (max-width: 320px) {
+      padding: 0 20px;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+    }
+  }
+
   &__top {
+    grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
     height: 96px;
-    padding: 0 120px;
     top: 0;
     background-color: #e5e6e8;
   }
 
   &__list {
+    grid-column: 1 / -1;
     display: flex;
     flex-direction: column;
     list-style: none;
     gap: 32px;
-    padding: 0 120px;
-    margin-top: 56px;
+
+    padding: 56px 0;
+    margin: 0;
   }
 
   &__logo {
@@ -69,12 +88,11 @@
   }
 
   &__footer {
+    grid-column: 1 / 4;
     display: flex;
     flex-direction: column;
     list-style: none;
     gap: 16px;
-    padding: 0 120px;
-    margin-top: 48px;
     align-items: flex-start;
   }
 
@@ -89,36 +107,14 @@
     padding-bottom: 4px;
   }
 
-  @media (max-width: 744px) {
-    &__top {
+      @media (max-width: 744px) {
       padding: 0 72px;
+      grid-template-columns: repeat(6, 1fr);
     }
 
-    &__list {
-      padding: 0 72px;
-    }
-
-    &__footer {
-      padding: 0 72px;
-    }
-  }
-
-  @media (max-width: 320px) {
-    &__top {
+    @media (max-width: 320px) {
       padding: 0 20px;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
     }
-
-    &__list {
-      padding: 0 20px;
-      gap: 24px;
-    }
-
-    &__footer {
-      padding: 0 20px;
-    }
-
-    &__link {
-      font-size: 18px;
-    }
-  }
 }

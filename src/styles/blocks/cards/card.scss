@@ -1,40 +1,17 @@
 .products {
-  padding: 120px 120px 0;
 
   &__title {
+    grid-column: 1 / -1;
     margin-bottom: 56px;
     font-size: 48px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 72px 72px 0;
-
-    &__title {
-      font-size: 40px;
-    }
-  }
-
-  @media (max-width: 320px) {
-    padding: 20px 20px 0;
-
-    &__title {
-      font-size: 28px;
-    }
   }
 }
 
 .cards {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  @media (max-width: 320px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 
 .card {
@@ -44,7 +21,7 @@
   }
 
   &__title {
-    font-size: 18px;
+    font-size: 16px;
     padding-top: 24px;
     padding-bottom: 8px;
   }
