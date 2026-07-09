@@ -47,4 +47,9 @@
       background-color: $color-border-form;
     }
   }
+
+  @media (max-width: 744px) {
+    grid-column: 1 / -1;
+    padding-bottom: 120px;
+  }
 }

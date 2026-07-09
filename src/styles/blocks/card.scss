@@ -1,9 +1,17 @@
 .products {
+  @include container;
 
   &__title {
     grid-column: 1 / -1;
     margin-bottom: 56px;
     font-size: 48px;
+  }
+
+  @media (max-width: 320px) {
+    &__title {
+      width: 280px;
+      font-size: 38px;
+    }
   }
 }
 
@@ -12,6 +20,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+
+  @media (max-width: 744px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {

@@ -1,4 +1,5 @@
 .contact {
+  @include container;
 
   &__title {
     font-size: 48px;
@@ -36,6 +37,17 @@
 
     a {
       color: $color-value;
+    }
+  }
+
+  @media (max-width: 744px) {
+    &__title {
+      padding-top: 120px;
+    }
+
+    &__info {
+      grid-column: 1 / -1;
+      padding-bottom: 120px;
     }
   }
 }

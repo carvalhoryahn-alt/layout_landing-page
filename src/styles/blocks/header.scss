@@ -1,20 +1,33 @@
 .header {
-  animation: fade-in $animation-duration ease-in-out;
-  background-image: url('../images/Image-header.png');
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
+  @include container;
+
   margin-bottom: 120px;
+  animation: fade-in $animation-duration ease-in-out;
+
+  &__image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 720px;
+    z-index: -1;
+    background-image: url('../images/Image-header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     grid-column: 1 / -1;
+    height: 96px;
   }
 
   &__title {
     padding-top: 420px;
+    padding-bottom: 96px;
     font-size: 56px;
     grid-column: 1 / 6;
     width: 498px;
@@ -26,11 +39,9 @@
     gap: 32px;
   }
 
-  &__logo {
-    img {
-      display: block;
-      height: 24px;
-    }
+  &__logo img {
+    display: block;
+    height: 24px;
   }
 
   &__phone-number {
@@ -56,11 +67,9 @@
       height: 24px;
     }
 
-    &:hover {
-      .header__phone-number {
-        opacity: 1;
-        width: auto;
-      }
+    &:hover .header__phone-number {
+      opacity: 1;
+      width: auto;
     }
   }
 
@@ -91,6 +100,36 @@
       .header__burger-icon--hover {
         opacity: 1;
       }
+    }
+  }
+
+  @media (max-width: 320px) {
+    &__title {
+      grid-column: 1 / -1;
+      font-size: 36px;
+      max-width: 280px;
+    }
+
+    &__top {
+      grid-column: 1 / -1;
+      height: 72px;
+    }
+
+    &__logo img {
+      display: block;
+      height: 16px;
+      width: 125px;
+    }
+
+    &__phone-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__burger-icon,
+    &__burger-icon--hover {
+      width: 24px;
+      height: 24px;
     }
   }
 }

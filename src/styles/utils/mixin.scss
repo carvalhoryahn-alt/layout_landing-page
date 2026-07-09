@@ -1,0 +1,30 @@
+// utils/_mixins.scss
+@mixin container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 120px;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(12, 63px);
+  column-gap: 24px;
+
+  @media (max-width: 744px) {
+    padding: 0 70px;
+    grid-template-columns: repeat(6, 80px);
+  }
+
+  @media (max-width: 320px) {
+    padding-inline: 20px;
+    grid-template-columns: repeat(2, 130px);
+    column-gap: 20px;
+  }
+}
+
+@mixin footer-text {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: $color-dark;
+}

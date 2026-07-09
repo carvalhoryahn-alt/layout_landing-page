@@ -31,7 +31,12 @@
 
     <link
       rel="stylesheet"
-      href="/src/styles/main.scss"
+      href="./src/styles/blocks/index.scss"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./src/styles/blocks/main.scss"
     />
 
     <script
@@ -44,23 +49,23 @@
 
   <body class="page">
 
-     <!-- header region -->
-    <header class="header">
-      <div class="container">
+    <!-- header region -->
+      <header class="header">
+        <div class="header__image"></div>
         <div class="header__top">
           <a href="#" class="header__logo">
-            <img src="./src/images/nothing-logo.svg" alt="nothing-logo">
+            <img src="./src/styles/images/nothing-logo.svg" alt="nothing-logo">
           </a>
 
           <div class="header__actions">
             <a href="tel:+12345555555" class="header__phone">
               <span class="header__phone-number">+1 234 555-55-55</span>
-              <img class="header__phone-icon" src="./src/images/Icon-Phone-call.svg" alt="phone-icon">
+              <img class="header__phone-icon" src="./src/styles/images/Icon-Phone-call.svg" alt="phone-icon">
             </a>
 
             <a href="#menu" class="header__burger">
-              <img class="header__burger-icon" src="./src/images/hamburger-icon.svg" alt="menu">
-              <img class="header__burger-icon--hover" src="./src/images/hamgurger-after-icon.svg" alt="menu">
+              <img class="header__burger-icon" src="./src/styles/images/hamburger-icon.svg" alt="menu">
+              <img class="header__burger-icon--hover" src="./src/styles/images/hamgurger-after-icon.svg" alt="menu">
             </a>
           </div>
         </div>
@@ -69,23 +74,21 @@
           Bring joy back to
           the everyday
         </h1>
+      </header>
+    <!-- header region -->
 
-      </div>
-    </header>
-     <!-- header region -->
-
-     <!-- menu region -->
+    <!-- menu region -->
     <nav class="menu page__menu" id="menu">
       <div class="menu__container">
         <div class="menu__top">
 
           <a href="#" class="menu__logo">
-            <img src="./src/images/nothing-logo.svg"
+            <img src="./src/styles/images/nothing-logo.svg"
              alt="nothing-logo"
             >
           </a>
           <a href="#" class="menu__close">
-            <img class="menu__close-icon" src="./src/images/close-icon.svg"
+            <img class="menu__close-icon" src="./src/styles/images/close-icon.svg"
              alt="close"
             >
           </a>
@@ -116,11 +119,10 @@
         </div>
       </div>
     </nav>
-     <!-- menu region -->
+    <!-- menu region -->
 
-
+    <!-- products region -->
     <section class="products" id="products">
-      <div class="container">
         <h2 class="products__title">
           Recommended
         </h2>
@@ -129,7 +131,7 @@
           <article class="card">
             <a class="card__link" href="#">
               <img class="card__image"
-                src="./src/images/image product-2.png"
+                src="./src/styles/images/image product-2.png"
                 alt="Phone (1)"
               >
             </a>
@@ -151,10 +153,10 @@
 
           <article class="card">
 
-            <a class="card__link" href="">
+            <a class="card__link" href="#">
 
               <img class="card__image"
-                src="./src/images/Image product-1.png"
+                src="./src/styles/images/Image product-1.png"
                 alt="ear (2)"
               >
             </a>
@@ -178,7 +180,7 @@
 
             <a class="card__link" href="#">
               <img class="card__image"
-                src="./src/images/Image product-3.png"
+                src="./src/styles/images/Image product-3.png"
                 alt="ear (stick)"
               >
             </a>
@@ -199,11 +201,11 @@
             </p>
           </article>
         </div>
-      </div>
     </section>
+    <!-- products region -->
 
+    <!-- gallery region -->
     <section class="gallery" id="gallery">
-      <div class="container">
         <h2 class="gallery__title">
           Browse Nothing
           <br>
@@ -233,49 +235,47 @@
             View all
           </button>
         </div>
-      </div>
     </section>
+    <!-- gallery region -->
 
+    <!-- footer region -->
     <footer class="footer">
       <div class="footer__image"></div>
 
       <section class="about" id="about">
-        <div class="container">
-          <h2 class="about__title">
+        <h2 class="about__title">
            About us
-          </h2>
+        </h2>
 
-          <p class="about__description">
-            We're a London-based tech company on a mission to
+        <p class="about__description">
+          We're a London-based tech company on a mission to
            <br>
-            remove barriers between people and technology. <br>
+          remove barriers between people and technology. <br>
            <br>
-           To do this, we're crafting intuitive, flawlessly
+          To do this, we're crafting intuitive, flawlessly
            <br>
-           connected products that improve our lives without
+          connected products that improve our lives without
            <br>
-           getting in the way.
+          getting in the way.
            <br>
-           No confusing tech-speak. No silly product names.
+          No confusing tech-speak. No silly product names.
            <br>
-           Just artistry, passion and trust. And products
+          Just artistry, passion and trust. And products
            <br>
-           we're proud to share with our friends and family.
+          we're proud to share with our friends and family.
            <br>
-           Simple.
+          Simple.
            <br>
            <br>
-           Because beautiful tech shouldn't be complicated.
-          </p>
-        </div>
+          Because beautiful tech shouldn't be complicated.
+        </p>
       </section>
 
       <section class="contact" id="contact">
 
-        <div class="container">
-          <h2 class="contact__title">
-            Contact us
-          </h2>
+        <h2 class="contact__title">
+          Contact us
+        </h2>
 
           <form class="form"
             action="#"
@@ -336,8 +336,8 @@
               </p>
             </div>
           </div>
-        </div>
       </section>
     </footer>
+    <!-- footer region -->
   </body>
 </html>

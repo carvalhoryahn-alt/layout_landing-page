@@ -11,24 +11,7 @@
   }
 
   &__container {
-    max-width: 1260px;
-    margin: 0 auto;
-    padding: 0 120px;
-
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 24px;
-
-    @media (max-width: 744px) {
-      padding: 0 72px;
-      grid-template-columns: repeat(6, 1fr);
-    }
-
-    @media (max-width: 320px) {
-      padding: 0 20px;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 20px;
-    }
+    @include container;
   }
 
   &__top {
@@ -48,7 +31,6 @@
     flex-direction: column;
     list-style: none;
     gap: 32px;
-
     padding: 56px 0;
     margin: 0;
   }
@@ -106,15 +88,4 @@
     border-bottom: 1px solid $color-dark;
     padding-bottom: 4px;
   }
-
-      @media (max-width: 744px) {
-      padding: 0 72px;
-      grid-template-columns: repeat(6, 1fr);
-    }
-
-    @media (max-width: 320px) {
-      padding: 0 20px;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 20px;
-    }
 }
